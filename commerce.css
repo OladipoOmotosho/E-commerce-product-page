@@ -13,12 +13,12 @@ body {
 
 .header {
   margin-top: 45px;
-  padding-bottom: 47px;
+  padding-bottom: 35px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid hsl(220, 14%, 75%);
+  border-bottom: 2px solid hsl(220, 14%, 95%);
 }
 
 nav {
@@ -44,6 +44,11 @@ nav a {
 #cart {
   margin: 0px 45px 14px 0px;
 }
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  gap: 125px;
+}
 
 #mainImg {
   width: 444px;
@@ -52,15 +57,67 @@ nav a {
   margin: 90px 0px 0px 30px;
 }
 
-#thumbnails{
-    width: 89px;
-    height: 89px;
-    border-radius: 10px;
+#thumbnails {
+  width: 89px;
+  height: 89px;
+  border-radius: 10px;
 }
 
-.imageDsiplay{
-    margin: 30px 0px 125px 30px;  
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+.imageClass:hover {
+  cursor: pointer;
+  background: hsl(25, 100%, 94%);
+  /* z-index: 3;*/
+}
+
+#thumbnails:hover {
+}
+
+.imageDsiplay {
+  margin: 30px 0px 125px 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.rightSide {
+  margin: 153px 0px 0px 0px;
+}
+
+.rightSide small {
+  font-weight: 700;
+  color: hsl(26, 100%, 55%);
+  letter-spacing: 1.5px;
+}
+.rightSide h1 {
+  margin-top: 10px;
+  width: 390px;
+  color: #000;
+  font-weight: 700;
+}
+
+.rightSide p {
+  margin-top: 24px;
+  width: 415px;
+  font-weight: 400;
+  font-size: 16px;
+  color: hsl(219, 9%, 45%);
+}
+
+.rightSide h3 {
+  font-family: "Kumbh Sans", sans-serif;
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+#promo {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#promo h4 {
+  background: orange;
 }
