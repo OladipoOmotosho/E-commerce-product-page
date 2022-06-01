@@ -258,8 +258,8 @@ nav a {
   height: 100%;
   background-color:rgba(0, 0, 0, 0.8);
   z-index: 1;
-  overflow-y: scroll;
-  /* display: none; */
+  overflow-y: hidden;
+  display: none;
 }
 
 .modalBg::-webkit-scrollbar {
@@ -269,7 +269,7 @@ nav a {
 .modal {
   display: flex;
   justify-content: center;
-  margin: 117px 0px 0px 30px;
+  margin: 20px 0px 0px 30px;
 }
 
 #mainImgPop {
