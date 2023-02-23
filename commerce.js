@@ -1,6 +1,6 @@
-var close = document.getElementById("closeOrange");
-var modal = document.getElementsByClassName("modalBg")[0];
-var displayItems = document.getElementById("overlay");
+let close = document.getElementById("closeOrange");
+let modal = document.getElementsByClassName("modalBg")[0];
+let displayItems = document.getElementById("overlay");
 
 //  var displayItems = document.querySelectorAll('.highlight')[0];
 //  var displayItems = document.querySelectorAll('.highlight').forEach( => {
