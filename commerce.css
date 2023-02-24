@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
 }
+
 .body {
   width: 1440px;
   height: 900px;
@@ -60,6 +61,7 @@ nav a:hover {
   cursor: pointer;
   margin: 0px 45px 14px 0px;
 }
+
 .mainContent {
   display: flex;
   flex-direction: row;
@@ -87,6 +89,7 @@ nav a:hover {
   z-index: 0;
   display: none;
 }
+
 .overlayy {
   position: relative;
   bottom: 63px;
@@ -103,6 +106,7 @@ nav a:hover {
   /* background: rgba(0, 0, 0, .6); */
   border: 2px solid hsl(26, 100%, 55%);
 }
+
 .highlight:hover .overlayy {
   display: block;
   /* background: rgba(0, 0, 0, .6); */
@@ -117,6 +121,7 @@ nav a:hover {
   border-radius: 10px;
   z-index: 1;
 }
+
 #thumbnailss {
   cursor: pointer;
   width: 59px;
@@ -142,6 +147,7 @@ nav a:hover {
   color: hsl(26, 100%, 55%);
   letter-spacing: 1.5px;
 }
+
 .rightSide h1 {
   margin-top: 10px;
   width: 390px;
@@ -209,6 +215,7 @@ nav a:hover {
   color: hsl(26, 100%, 55%);
   padding-bottom: 3px;
 }
+
 #plus {
   cursor: pointer;
   position: relative;
@@ -219,6 +226,7 @@ nav a:hover {
   color: hsl(26, 100%, 55%);
   padding-bottom: 1px;
 }
+
 #zero {
   /* position: relative;
   bottom: 30; */
@@ -246,8 +254,7 @@ nav a:hover {
   border: none;
   border-radius: 7px;
   color: #ffffff;
-  box-shadow: -1px 0px 15px -3px rgba(255, 125, 26, 0.2),
-    -2px 13px 13px 5px rgba(255, 125, 26, 0.12);
+  box-shadow: -1px 0px 15px -3px rgba(255, 125, 26, 0.2), -2px 13px 13px 5px rgba(255, 125, 26, 0.12);
 }
 
 .bracket {
@@ -283,7 +290,7 @@ nav a:hover {
 .modal {
   display: flex;
   justify-content: center;
-  margin: 20px 0px 0px 30px;
+  margin: 150px 0px 0px 30px;
 }
 
 #mainImgPop {
@@ -343,6 +350,7 @@ nav a:hover {
   bottom: 0px;
   transition: all 0.1s;
 }
+
 #prev:hover #blackprev {
   display: none;
 }
@@ -353,6 +361,7 @@ nav a:hover {
   bottom: 0px;
   transition: all 0.1s;
 }
+
 #nex:hover #blackNex {
   display: none;
 }
