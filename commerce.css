@@ -274,7 +274,7 @@ nav a:hover {
   color: hsl(220, 14%, 75%);
 }
 
-.modalBg {
+#modalBg {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -286,11 +286,11 @@ nav a:hover {
   display: none;
 }
 
-.modalBg::-webkit-scrollbar {
+#modalBg::-webkit-scrollbar {
   display: none;
 }
 
-.modal {
+#modal {
   display: flex;
   justify-content: center;
   margin: 150px 0px 0px 30px;
