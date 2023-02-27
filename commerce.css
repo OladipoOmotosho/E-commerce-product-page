@@ -574,6 +574,12 @@ nav a:hover {
         flex-direction: row;
         gap: 10px;
     }
+    .flexDisplay {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     #promo h4 {
         text-align: center;
         margin: 0px 0px 0px 0px;
@@ -647,7 +653,7 @@ nav a:hover {
         gap: 20px;
     }
     #priceSlash {
-        margin-top: 5px;
+        margin-top: 20px;
         font-size: 14px;
         font-weight: 400;
         color: hsl(220, 14%, 75%);
