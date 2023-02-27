@@ -52,6 +52,7 @@ function showPrevImage() {
     currentIndex--;
   }
   mainImgPop.src = `./images/product${currentIndex}.jpg`;
+  mainImg.src = `./images/product${currentIndex}.jpg`;
 }
 
 // This function displays the next image in the carousel
@@ -62,6 +63,8 @@ function showNextImage() {
     currentIndex++;
   }
   mainImgPop.src = `./images/product${currentIndex}.jpg`;
+  mainImg.src = `./images/product${currentIndex}.jpg`;
+  console.log("hello world");
 }
 
 // This code adds click event listeners to each preview image

@@ -480,7 +480,17 @@ nav a:hover {
     display: none;
 }
 
-@media screen and (max-width: 440px) {
+.upperArrowBtns {
+    display: none;
+}
+
+@media (max-width: 440px) {
+    .upperArrowBtns {
+        margin: 0px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .body {
         width: 100%;
         height: auto;
@@ -619,8 +629,6 @@ nav a:hover {
         padding-bottom: 1px;
     }
     #zero {
-        /* position: relative;
-  bottom: 30; */
         cursor: pointer;
         font-size: 22px;
         font-weight: 500;
@@ -683,51 +691,7 @@ nav a:hover {
         border-radius: 10px;
     }
     #prev {
-        cursor: pointer;
-        position: relative;
-        top: 210px;
-        right: 20px;
-        padding: 8px 8px;
-        background: #ffffff;
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-    }
-    #orangeprev {
-        position: relative;
-        bottom: 20px;
-        display: none;
-    }
-    #orangeNex {
-        position: relative;
-        bottom: 20px;
-        display: none;
-    }
-    #close {
-        height: auto;
-    }
-    #closeOrange {
-        display: none;
-        position: relative;
-        top: -20px;
-        /* height: fit-content; */
-    }
-    #close:hover #closeOrange {
-        display: block;
-        position: relative;
-        top: 1px;
-    }
-    #close:hover #closeWhite {
-        display: none;
-    }
-    #prev:hover #orangeprev {
-        display: block;
-        position: relative;
-        bottom: 0px;
-        transition: all 0.1s;
-    }
-    #prev:hover #blackprev {
-        display: none;
+        right: 0px;
     }
     #nex:hover #orangeNex {
         display: block;
@@ -739,21 +703,7 @@ nav a:hover {
         display: none;
     }
     #nex {
-        cursor: pointer;
-        position: relative;
-        top: 210px;
-        right: 11px;
-        padding: 8px 10px;
-        background: #ffffff;
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-    }
-    #close {
-        height: 20px;
-        cursor: pointer;
-        position: relative;
-        left: 444px;
+        right: 0px;
     }
     #imageDisplay {
         justify-content: center;
