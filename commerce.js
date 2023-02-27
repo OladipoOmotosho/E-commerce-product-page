@@ -1,41 +1,41 @@
 const closeBtn = document.getElementById("closeOrange");
 const modal = document.getElementById("modalBg");
-const displayItems = document.getElementById("overlay");
+const displayItems = document.querySelectorAll("#overlay");
 const displayCart = document.getElementById("cartDropdown");
 const cart = document.getElementById("cart");
 const nextBtn = document.getElementById("nex");
 const prevBtn = document.getElementById("prev");
 const mainImgPop = document.getElementById("mainImgPop");
-const thumbnail = document.querySelectorAll("#thumbnailss");
+const mainImg = document.getElementById("mainImg");
+const thumbnails = document.querySelectorAll("#thumbnailss");
 const overlay = document.getElementsByClassName("overlayy");
-// const preview = document.getElementById("highlight");
-const highlight1 = document.getElementById("#highlight1");
-const highlight2 = document.getElementById("#highlight2");
-const highlight3 = document.getElementById("#highlight3");
-const highlight4 = document.getElementById("#highlight4");
+const preview = document.querySelectorAll(".highlight");
 
 var currentIndex = 1;
+var currentImg = 1;
 
 closeBtn.addEventListener("click", closeModal);
 prevBtn.addEventListener("click", showPrevImage);
 nextBtn.addEventListener("click", showNextImage);
-displayItems.addEventListener("click", openModal);
+displayItems.forEach((item) => item.addEventListener("click", openModal));
 cart.addEventListener("click", toggleCart);
-// preview.addEventListener("click", selectedImg);
 
 function closeModal() {
   modal.style.display = "none";
 }
 
 function openModal() {
-  modal.style.display = "block";
+  for (let i = 0; i < displayItems.length; i++) {
+    modal.style.display = "block";
+  }
 }
 
 function toggleCart() {
-  if (cartDropdown.style.display === "none") {
-    cartDropdown.style.display = "block";
+  console.log(displayItems);
+  if (displayCart.style.display === "none") {
+    displayCart.style.display = "block";
   } else {
-    cartDropdown.style.display = "none";
+    displayCart.style.display = "none";
   }
 }
 
@@ -55,26 +55,20 @@ function showNextImage() {
     currentIndex++;
   }
   mainImgPop.src = `./images/product${currentIndex}.jpg`;
-  // console.log(mainImgPop);
 }
 
-highlight1.addEventListener("click", () => {
-  mainImgPop.src = "./images/product1.jpg";
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener("click", () => {
+    // Code to open the pop modal here
+    console.log("Pop modal opened");
+  });
 });
 
-highlight2.addEventListener("click", () => {
-  mainImgPop.src = "./images/product2.jpg";
+preview.forEach((highlight) => {
+  highlight.addEventListener("click", () => {
+    // Get the ID of the clicked highlight
+    const idNo = highlight.id.slice(-1);
+    // Set the src attribute of the mainImg element based on the ID
+    mainImgPop.src = `./images/product${idNo}.jpg`;
+  });
 });
-
-highlight3.addEventListener("click", () => {
-  mainImgPop.src = "./images/product3.jpg";
-});
-
-highlight4.addEventListener("click", () => {
-  mainImgPop.src = "./images/product4.jpg";
-});
-
-// function selectedImg() {
-//   mainImgPop.src = thumbnail[`${currentIndex}`];
-//   console.log(thumbnail);
-// }

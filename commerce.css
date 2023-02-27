@@ -131,7 +131,7 @@ nav a:hover {
   z-index: 1;
 }
 
-.imageDisplay {
+#imageDisplay {
   margin: 30px 0px 125px 30px;
   display: flex;
   flex-direction: row;
@@ -388,7 +388,7 @@ nav a:hover {
   left: 444px;
 }
 
-.imageDisplay {
+#imageDisplay {
   justify-content: center;
 }
 
