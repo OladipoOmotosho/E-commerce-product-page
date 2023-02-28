@@ -484,7 +484,7 @@ nav a:hover {
     display: none;
 }
 
-@media (max-width: 440px) {
+@media screen and (max-width: 440px) {
     .upperArrowBtns {
         margin: 0px 20px;
         display: flex;

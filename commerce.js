@@ -19,7 +19,9 @@ var currentImg = 1;
 // These functions are event handlers that respond to user interactions
 closeBtn.addEventListener("click", closeModal);
 prevBtn.addEventListener("click", showPrevImage);
+prevBtn.addEventListener("touchend", showPrevImage);
 nextBtn.addEventListener("click", showNextImage);
+nextBtn.addEventListener("touchend", showNextImage);
 displayItems.forEach((item) => item.addEventListener("click", openModal));
 cart.addEventListener("click", toggleCart);
 
@@ -46,25 +48,26 @@ function toggleCart() {
 
 // This function displays the previous image in the carousel
 function showPrevImage() {
+  console.log("hello");
   if (currentIndex === 1) {
     currentIndex = 4;
   } else {
     currentIndex--;
   }
-  mainImgPop.src = `./images/product${currentIndex}.jpg`;
+  // mainImgPop.src = `./images/product${currentIndex}.jpg`;
   mainImg.src = `./images/product${currentIndex}.jpg`;
 }
 
 // This function displays the next image in the carousel
 function showNextImage() {
+  console.log("hello");
   if (currentIndex == 4) {
     currentIndex = 1;
   } else {
     currentIndex++;
   }
-  mainImgPop.src = `./images/product${currentIndex}.jpg`;
+  // mainImgPop.src = `./images/product${currentIndex}.jpg`;
   mainImg.src = `./images/product${currentIndex}.jpg`;
-  console.log("hello world");
 }
 
 // This code adds click event listeners to each preview image
