@@ -79,3 +79,5 @@ preview.forEach((highlight) => {
     mainImgPop.src = `./images/product${idNo}.jpg`;
   });
 });
+
+// button click still not working 
