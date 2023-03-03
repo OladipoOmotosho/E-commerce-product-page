@@ -314,6 +314,18 @@ nav a:hover {
     border-radius: 100%;
 }
 
+#prevBtn {
+    cursor: pointer;
+    position: relative;
+    top: 210px;
+    right: 20px;
+    padding: 8px 8px;
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
 #orangeprev {
     position: relative;
     bottom: 20px;
@@ -347,14 +359,14 @@ nav a:hover {
     display: none;
 }
 
-#prev:hover #orangeprev {
+#prevBtn:hover #orangeprev {
     display: block;
     position: relative;
     bottom: 0px;
     transition: all 0.1s;
 }
 
-#prev:hover #blackprev {
+#prevBtn:hover #blackprev {
     display: none;
 }
 
@@ -370,6 +382,40 @@ nav a:hover {
 }
 
 #nex {
+    cursor: pointer;
+    position: relative;
+    top: 210px;
+    right: 11px;
+    padding: 8px 10px;
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+#prevBtn:hover #orangeprev {
+    display: block;
+    position: relative;
+    bottom: 0px;
+    transition: all 0.1s;
+}
+
+#prevBtn:hover #blackprev {
+    display: none;
+}
+
+#nextBtn:hover #orangeNex {
+    display: block;
+    position: relative;
+    bottom: 0px;
+    transition: all 0.1s;
+}
+
+#nextBtn:hover #blackNex {
+    display: none;
+}
+
+#nextBtn {
     cursor: pointer;
     position: relative;
     top: 210px;
@@ -690,19 +736,34 @@ nav a:hover {
         height: 440px;
         border-radius: 10px;
     }
-    #prev {
+    #prevBtn {
         right: 0px;
     }
-    #nex:hover #orangeNex {
+    #nextBtn:hover #orangeNex {
         display: block;
         position: relative;
         bottom: 0px;
         transition: all 0.1s;
     }
-    #nex:hover #blackNex {
+    #nextBtn:hover #blackNex {
         display: none;
     }
-    #nex {
+    #nextBtn {
+        right: 0px;
+    }
+    #prevBtn {
+        right: 0px;
+    }
+    #nextBtn:hover #orangeNex {
+        display: block;
+        position: relative;
+        bottom: 0px;
+        transition: all 0.1s;
+    }
+    #nextBtn:hover #blackNex {
+        display: none;
+    }
+    #nextBtn {
         right: 0px;
     }
     #imageDisplay {
