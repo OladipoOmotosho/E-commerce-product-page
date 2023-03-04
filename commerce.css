@@ -770,16 +770,15 @@ nav a:hover {
         justify-content: center;
     }
     .cartDropdown {
-        display: none;
+        z-index: 100;
+        display: block;
         position: absolute;
-        right: 200px;
+        right: 30px;
+        left: 30px;
         top: 100px;
-        width: auto;
+        width: 80%;
         height: auto;
         padding-bottom: 24px;
-        background-color: #ffffff;
-        border-radius: 6px;
-        box-shadow: 0px 13px 25px -10px rgba(0, 0, 0, 0.2), 0px 13px 13px -5px rgba(0, 0, 0, 0.12);
     }
     #cartImg {
         width: 50px;
