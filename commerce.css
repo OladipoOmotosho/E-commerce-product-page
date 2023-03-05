@@ -528,6 +528,8 @@ nav a:hover {
 
 .upperArrowBtns {
     display: none;
+    margin: 0;
+    position: absolute;
 }
 
 @media screen and (max-width: 440px) {
