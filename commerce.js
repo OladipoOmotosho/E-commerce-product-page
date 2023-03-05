@@ -21,9 +21,9 @@ var currentImg = 1;
 // These functions are event handlers that respond to user interactions
 closeBtn.addEventListener("click", closeModal);
 prevBtn.addEventListener("click", showPrevImage);
-prevBtnn.addEventListener("touchend", showPrevImage);
+prevBtnn.addEventListener("touchend", showPrevImageMobile);
 nextBtn.addEventListener("click", showNextImage);
-nextBtnn.addEventListener("touchend", showNextImage);
+nextBtnn.addEventListener("touchend", showNextImageMobile);
 displayItems.forEach((item) => item.addEventListener("click", openModal));
 cart.addEventListener("click", toggleCart);
 
@@ -56,6 +56,15 @@ function showPrevImage() {
     currentIndex--;
   }
   mainImgPop.src = `./images/product${currentIndex}.jpg`;
+}
+
+
+function showPrevImageMobile() {
+  if (currentIndex === 1) {
+    currentIndex = 4;
+  } else {
+    currentIndex--;
+  }
   mainImg.src = `./images/product${currentIndex}.jpg`;
 }
 
@@ -67,6 +76,15 @@ function showNextImage() {
     currentIndex++;
   }
   mainImgPop.src = `./images/product${currentIndex}.jpg`;
+}
+
+
+function showNextImageMobile() {
+  if (currentIndex == 4) {
+    currentIndex = 1;
+  } else {
+    currentIndex++;
+  }
   mainImg.src = `./images/product${currentIndex}.jpg`;
 }
 
