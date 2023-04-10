@@ -13,7 +13,9 @@ const mainImg = document.getElementById("mainImg");
 const thumbnails = document.querySelectorAll("#thumbnailss");
 const overlay = document.getElementsByClassName("overlayy");
 const preview = document.querySelectorAll(".highlight");
-
+const plusBtn = document.getElementById("plus");
+const minusBtn = document.getElementById("minus");
+const quantity = document.getElementById("quantity");
 // These variables keep track of the current state of the image carousel
 var currentIndex = 1;
 var currentImg = 1;
@@ -26,6 +28,31 @@ nextBtn.addEventListener("click", showNextImage);
 nextBtnn.addEventListener("touchend", showNextImageMobile);
 displayItems.forEach((item) => item.addEventListener("click", openModal));
 cart.addEventListener("click", toggleCart);
+
+// Reduce the opacity of the minus button when the value is equal to zero
+if (parseInt(quantity.textContent) === 0) {
+  minusBtn.style.opacity = 0.5;
+}
+
+plusBtn.addEventListener("click", () => {
+  // Increase the value of the zero element by 1
+  quantity.textContent = parseInt(quantity.textContent) + 1;
+
+  if (parseInt(quantity.textContent) > 0) {
+    minusBtn.style.opacity = 1;
+  }
+});
+
+minusBtn.addEventListener("click", () => {
+  // Decrease the value of the zero element by 1, but not below 0
+  const currentValue = parseInt(quantity.textContent);
+
+  if (currentValue > 0) {
+    quantity.textContent = currentValue - 1;
+  } else if (currentValue === 0) {
+    minusBtn.style.opacity = 0.5;
+  }
+});
 
 // This function hides the modal when called
 function closeModal() {
@@ -58,7 +85,6 @@ function showPrevImage() {
   mainImgPop.src = `./images/product${currentIndex}.jpg`;
 }
 
-
 function showPrevImageMobile() {
   if (currentIndex === 1) {
     currentIndex = 4;
@@ -77,7 +103,6 @@ function showNextImage() {
   }
   mainImgPop.src = `./images/product${currentIndex}.jpg`;
 }
-
 
 function showNextImageMobile() {
   if (currentIndex == 4) {
@@ -98,4 +123,4 @@ preview.forEach((highlight) => {
   });
 });
 
-// button click now  working 
+// button click now  working

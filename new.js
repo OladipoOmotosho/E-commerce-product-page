@@ -7,8 +7,7 @@ const mainThumbnailLightBox = document.querySelector(
   ".lightbox-container .main-thumbnail"
 );
 const images = document.querySelectorAll(".preview img");
-const plusBtn = document.querySelector("#plus");
-const minusBtn = document.querySelector("#minus");
+
 const amount = document.querySelector(".amount");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("previous");

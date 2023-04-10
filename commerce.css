@@ -230,7 +230,7 @@ nav a:hover {
     padding-bottom: 1px;
 }
 
-#zero {
+#quantity {
     /* position: relative;
   bottom: 30; */
     cursor: pointer;
@@ -539,12 +539,14 @@ nav a:hover {
         flex-direction: row;
         justify-content: space-between;
     }
+
     .body {
         width: 100%;
         height: auto;
         padding: 0px;
         /* overflow-y: hidden; */
     }
+
     .header {
         margin-top: 0px;
         padding: 12px 16px;
@@ -552,69 +554,86 @@ nav a:hover {
         align-items: center;
         /* gap: 20px; */
     }
+
     nav {
         display: none;
     }
+
     #avatar {
         width: 30px;
         height: auto;
         cursor: pointer;
     }
+
     #avatar:hover {
         border: 2px solid hsl(26, 100%, 55%);
         border-radius: 100%;
     }
+
     .mainContent {
         flex-direction: column;
         gap: 25px;
     }
+
     #mainImg {
         width: 100%;
         height: auto;
         border-radius: 0px;
         margin: 0px 0px 0px 0px;
     }
+
     .highlight {
         cursor: pointer;
     }
+
     #overlay {
         display: none;
     }
+
     .overlayy {
         display: none;
     }
+
     .highlight:hover #overlay {
         display: none;
     }
+
     .highlight:hover .overlayy {
         display: none;
     }
+
     #thumbnails {
         display: none;
     }
+
     #thumbnailss {
         display: none;
     }
+
     #imageDisplay {
         margin: 0px 0px;
         display: flex;
         flex-direction: row;
         gap: 30px;
     }
+
     .rightSide {
         margin: 20px 16px;
     }
+
     .rightSide small {
         font-weight: 700;
         color: hsl(26, 100%, 55%);
         font-size: 14px;
         letter-spacing: 0.1rem;
     }
+
     .rightSide h1 {
         margin-top: 10px;
         width: auto;
         font-size: 28px;
     }
+
     .rightSide p {
         margin-top: 14px;
         width: auto;
@@ -622,22 +641,26 @@ nav a:hover {
         letter-spacing: 0rem;
         font-weight: 500;
     }
+
     .rightSide h3 {
         font-size: 18px;
         letter-spacing: 1px;
     }
+
     #promo {
         margin-top: 24px;
         display: flex;
         flex-direction: row;
         gap: 10px;
     }
+
     .flexDisplay {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+
     #promo h4 {
         text-align: center;
         margin: 0px 0px 0px 0px;
@@ -651,11 +674,13 @@ nav a:hover {
         color: hsl(26, 100%, 55%);
         background-color: hsl(25, 100%, 94%);
     }
+
     .quantity {
         width: 100%;
         padding: 5px 10px;
         justify-content: space-between;
     }
+
     #minus {
         cursor: pointer;
         position: relative;
@@ -666,6 +691,7 @@ nav a:hover {
         color: hsl(26, 100%, 55%);
         padding-bottom: 3px;
     }
+
     #plus {
         cursor: pointer;
         position: relative;
@@ -676,7 +702,8 @@ nav a:hover {
         color: hsl(26, 100%, 55%);
         padding-bottom: 1px;
     }
-    #zero {
+
+    #quantity {
         cursor: pointer;
         font-size: 22px;
         font-weight: 500;
@@ -684,6 +711,7 @@ nav a:hover {
         color: #000;
         padding-bottom: 1px;
     }
+
     #cartbtn {
         cursor: pointer;
         text-align: center;
@@ -702,18 +730,21 @@ nav a:hover {
         color: #ffffff;
         box-shadow: -1px 0px 15px -3px rgba(255, 125, 26, 0.2), -2px 13px 13px 5px rgba(255, 125, 26, 0.12);
     }
+
     .bracket {
         display: flex;
         flex-direction: column;
         margin-top: 35px;
         gap: 20px;
     }
+
     #priceSlash {
         margin-top: 20px;
         font-size: 14px;
         font-weight: 400;
         color: hsl(220, 14%, 75%);
     }
+
     #modalBg {
         position: fixed;
         top: 0;
@@ -725,52 +756,65 @@ nav a:hover {
         overflow-y: hidden;
         display: none;
     }
+
     #modalBg::-webkit-scrollbar {
         display: none;
     }
+
     #modal {
         display: flex;
         justify-content: center;
         margin: 150px 0px 0px 30px;
     }
+
     #mainImgPop {
         width: 444px;
         height: 440px;
         border-radius: 10px;
     }
+
     #prevBtn {
         right: 0px;
     }
+
     #nextBtn:hover #orangeNex {
         display: block;
         position: relative;
         bottom: 0px;
         transition: all 0.1s;
     }
+
     #nextBtn:hover #blackNex {
         display: none;
     }
+
     #nextBtn {
         right: 0px;
     }
+
     #prevBtn {
         right: 0px;
     }
+
     #nextBtn:hover #orangeNex {
         display: block;
         position: relative;
         bottom: 0px;
         transition: all 0.1s;
     }
+
     #nextBtn:hover #blackNex {
         display: none;
     }
+
     #nextBtn {
         right: 0px;
     }
+
     #imageDisplay {
         justify-content: center;
     }
+
     .cartDropdown {
         z-index: 100;
         display: block;
@@ -783,31 +827,39 @@ nav a:hover {
         box-shadow: 10px 13px 125px -10px rgba(0, 0, 0, 0.2), 10px 13px 113px -5px rgba(0, 0, 0, 0.12);
         padding-bottom: 24px;
     }
+
     .cartDetails {
         justify-content: flex-start;
     }
+
     .cartItems p {
         font-size: 14px;
     }
+
     #checkout {
         padding: 14px 25px;
         font-size: 14px;
     }
+
     .borderBottom {
         padding: 24px 16px;
         padding-bottom: 24px;
         border-bottom: 2px solid #ececec;
     }
+
     .borderBottom h3 {
         font-weight: 700;
     }
+
     .logo2 {
         display: block;
     }
+
     .logo {
         margin-left: -3.125rem;
         margin-top: -0.2063rem;
     }
+
     #cart {
         cursor: pointer;
         margin: 0px 0.9375rem 0.3125rem 0rem;
