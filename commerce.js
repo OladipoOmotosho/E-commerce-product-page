@@ -16,6 +16,7 @@ const preview = document.querySelectorAll(".highlight");
 const plusBtn = document.getElementById("plus");
 const minusBtn = document.getElementById("minus");
 const quantity = document.getElementById("quantity");
+
 // These variables keep track of the current state of the image carousel
 var currentIndex = 1;
 var currentImg = 1;
@@ -30,9 +31,9 @@ displayItems.forEach((item) => item.addEventListener("click", openModal));
 cart.addEventListener("click", toggleCart);
 
 // Reduce the opacity of the minus button when the value is equal to zero
-if (parseInt(quantity.textContent) === 0) {
-  minusBtn.style.opacity = 0.5;
-}
+// if (parseInt(quantity.textContent) === 0) {
+//   minusBtn.style.opacity = 0.5;
+// }
 
 plusBtn.addEventListener("click", () => {
   // Increase the value of the zero element by 1
@@ -44,14 +45,32 @@ plusBtn.addEventListener("click", () => {
 });
 
 minusBtn.addEventListener("click", () => {
-  // Decrease the value of the zero element by 1, but not below 0
   const currentValue = parseInt(quantity.textContent);
+  // decrease the value of the zero element by 1
 
   if (currentValue > 0) {
     quantity.textContent = currentValue - 1;
   } else if (currentValue === 0) {
     minusBtn.style.opacity = 0.5;
   }
+});
+
+// Toggle the opacity of the minus button when the quantity value changes
+const observeQuantity = () => {
+  const quantityValue = parseInt(quantity.textContent);
+  if (quantityValue === 0) {
+    minusBtn.style.opacity = 0.5;
+  } else {
+    minusBtn.style.opacity = 1;
+  }
+};
+observeQuantity();
+// Create a new MutationObserver and observe changes to the quantity element
+const observer = new MutationObserver(observeQuantity);
+observer.observe(quantity, {
+  childList: true,
+  characterData: true,
+  subtree: true,
 });
 
 // This function hides the modal when called
