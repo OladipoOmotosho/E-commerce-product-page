@@ -6,13 +6,13 @@ const displayCart = document.getElementById("cartDropdown");
 const cart = document.getElementById("cart");
 const nextBtn = document.getElementById("nex");
 const prevBtn = document.getElementById("prev");
-const nextBtnn = document.getElementById("nextBtn");
-const prevBtnn = document.getElementById("prevBtn");
 const mainImgPop = document.getElementById("mainImgPop");
 const mainImg = document.getElementById("mainImg");
 const thumbnails = document.querySelectorAll("#thumbnailss");
 const overlay = document.getElementsByClassName("overlayy");
 const preview = document.querySelectorAll(".highlight");
+const nextBtnn = document.getElementById("nextBtn");
+const prevBtnn = document.getElementById("prevBtn");
 const plusBtn = document.getElementById("plus");
 const minusBtn = document.getElementById("minus");
 const quantity = document.getElementById("quantity");
@@ -24,16 +24,11 @@ var currentImg = 1;
 // These functions are event handlers that respond to user interactions
 closeBtn.addEventListener("click", closeModal);
 prevBtn.addEventListener("click", showPrevImage);
-prevBtnn.addEventListener("touchend", showPrevImageMobile);
 nextBtn.addEventListener("click", showNextImage);
-nextBtnn.addEventListener("touchend", showNextImageMobile);
 displayItems.forEach((item) => item.addEventListener("click", openModal));
 cart.addEventListener("click", toggleCart);
-
-// Reduce the opacity of the minus button when the value is equal to zero
-// if (parseInt(quantity.textContent) === 0) {
-//   minusBtn.style.opacity = 0.5;
-// }
+nextBtnn.addEventListener("touchend", showNextImageMobile);
+prevBtnn.addEventListener("touchend", showPrevImageMobile);
 
 plusBtn.addEventListener("click", () => {
   // Increase the value of the zero element by 1
@@ -141,5 +136,3 @@ preview.forEach((highlight) => {
     mainImgPop.src = `./images/product${idNo}.jpg`;
   });
 });
-
-// button click now  working

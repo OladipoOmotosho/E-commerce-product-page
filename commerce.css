@@ -528,16 +528,25 @@ nav a:hover {
 
 .upperArrowBtns {
     display: none;
-    margin: 0;
-    position: absolute;
+    margin: 0px;
+    /* position: relative; */
 }
 
 @media screen and (max-width: 440px) {
     .upperArrowBtns {
-        margin: 0px 20px;
+        margin-top: -30px;
+        padding: 0px 15px;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    #nextBtn {
+        right: 0px;
+    }
+
+    #prevBtn {
+        right: 0px;
     }
 
     .body {
@@ -745,26 +754,17 @@ nav a:hover {
         color: hsl(220, 14%, 75%);
     }
 
+    #modal {
+        display: none !important;
+        ;
+    }
+
     #modalBg {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 1;
-        overflow-y: hidden;
-        display: none;
+        display: none !important;
     }
 
     #modalBg::-webkit-scrollbar {
         display: none;
-    }
-
-    #modal {
-        display: flex;
-        justify-content: center;
-        margin: 150px 0px 0px 30px;
     }
 
     #mainImgPop {
@@ -773,51 +773,13 @@ nav a:hover {
         border-radius: 10px;
     }
 
-    #prevBtn {
-        right: 0px;
-    }
-
-    #nextBtn:hover #orangeNex {
-        display: block;
-        position: relative;
-        bottom: 0px;
-        transition: all 0.1s;
-    }
-
-    #nextBtn:hover #blackNex {
-        display: none;
-    }
-
-    #nextBtn {
-        right: 0px;
-    }
-
-    #prevBtn {
-        right: 0px;
-    }
-
-    #nextBtn:hover #orangeNex {
-        display: block;
-        position: relative;
-        bottom: 0px;
-        transition: all 0.1s;
-    }
-
-    #nextBtn:hover #blackNex {
-        display: none;
-    }
-
-    #nextBtn {
-        right: 0px;
-    }
-
     #imageDisplay {
         justify-content: center;
     }
 
     .cartDropdown {
         z-index: 100;
-        display: block;
+        display: none;
         position: absolute;
         right: 10px;
         left: 18px;
