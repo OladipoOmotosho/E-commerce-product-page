@@ -16,10 +16,18 @@ const prevBtnn = document.getElementById("prevBtn");
 const plusBtn = document.getElementById("plus");
 const minusBtn = document.getElementById("minus");
 const quantity = document.getElementById("quantity");
-
+const itemsInCart = document.getElementById("noOfCartItems");
 // These variables keep track of the current state of the image carousel
 var currentIndex = 1;
 var currentImg = 1;
+
+itemsInCart.textContent = 0;
+
+if(parseInt(itemsInCart.textContent) === 0){
+  itemsInCart.style.display = "none";
+}else{
+  itemsInCart.style.display = "inline-block";
+}
 
 // These functions are event handlers that respond to user interactions
 closeBtn.addEventListener("click", closeModal);
@@ -33,9 +41,10 @@ prevBtnn.addEventListener("touchend", showPrevImageMobile);
 plusBtn.addEventListener("click", () => {
   // Increase the value of the zero element by 1
   quantity.textContent = parseInt(quantity.textContent) + 1;
-
-  if (parseInt(quantity.textContent) > 0) {
+itemsInCart.textContent = parseInt(itemsInCart.textContent)+1
+  if (parseInt(quantity.textContent) > 0 ) {
     minusBtn.style.opacity = 1;
+    itemsInCart.style.display = "flex";
   }
 });
 
@@ -45,17 +54,21 @@ minusBtn.addEventListener("click", () => {
 
   if (currentValue > 0) {
     quantity.textContent = currentValue - 1;
-  } else if (currentValue === 0) {
+    itemsInCart.textContent = parseInt(quantity.textContent);
+  } else if (currentValue === 0 ) {
     minusBtn.style.opacity = 0.5;
+    itemsInCart.style.display = "none";
   }
 });
 
 // Toggle the opacity of the minus button when the quantity value changes
 const observeQuantity = () => {
   const quantityValue = parseInt(quantity.textContent);
-  if (quantityValue === 0) {
+  if (quantityValue === 0 && parseInt(itemsInCart.textContent) === 0) {
     minusBtn.style.opacity = 0.5;
+    itemsInCart.style.display = "none";
   } else {
+    itemsInCart.style.display = "flex";
     minusBtn.style.opacity = 1;
   }
 };

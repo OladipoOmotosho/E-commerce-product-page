@@ -532,6 +532,39 @@ nav a:hover {
     /* position: relative; */
 }
 
+.cartBox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    width: auto;
+    height: 30px;
+}
+
+.imageIcons {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    /* gap: 15px; */
+    align-items: center;
+
+}
+
+.noOfCartItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 8px;
+    position: relative;
+    top: -35px;
+    right: -16px;
+    width: 14px;
+    height: auto;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: hsl(26, 100%, 55%);
+}
+
 @media screen and (max-width: 440px) {
     .upperArrowBtns {
         margin-top: -30px;
@@ -539,6 +572,19 @@ nav a:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .cartBox {
+        margin-top: 15px;
+    }
+
+
+    .noOfCartItems {
+        top: -25px;
+    }
+
+    .imageIcons {
+        gap: 15px;
     }
 
     #nextBtn {
