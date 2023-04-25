@@ -17,17 +17,13 @@ const plusBtn = document.getElementById("plus");
 const minusBtn = document.getElementById("minus");
 const quantity = document.getElementById("quantity");
 const itemsInCart = document.getElementById("noOfCartItems");
+const cartDetails = document.getElementsByClassName("cartDetails");
+const addToCart = document.getElementById("cartbtn");
 // These variables keep track of the current state of the image carousel
 var currentIndex = 1;
 var currentImg = 1;
 
 itemsInCart.textContent = 0;
-
-if(parseInt(itemsInCart.textContent) === 0){
-  itemsInCart.style.display = "none";
-}else{
-  itemsInCart.style.display = "inline-block";
-}
 
 // These functions are event handlers that respond to user interactions
 closeBtn.addEventListener("click", closeModal);
@@ -37,6 +33,19 @@ displayItems.forEach((item) => item.addEventListener("click", openModal));
 cart.addEventListener("click", toggleCart);
 nextBtnn.addEventListener("touchend", showNextImageMobile);
 prevBtnn.addEventListener("touchend", showPrevImageMobile);
+
+
+
+
+
+
+
+if(parseInt(itemsInCart.textContent) === 0){
+  itemsInCart.style.display = "none";
+}else{
+  itemsInCart.style.display = "inline-block";
+}
+
 
 plusBtn.addEventListener("click", () => {
   // Increase the value of the zero element by 1
@@ -67,10 +76,16 @@ const observeQuantity = () => {
   if (quantityValue === 0 && parseInt(itemsInCart.textContent) === 0) {
     minusBtn.style.opacity = 0.5;
     itemsInCart.style.display = "none";
+    addToCart.disabled = true;
+    addToCart.style.opacity = 0.5
   } else {
     itemsInCart.style.display = "flex";
     minusBtn.style.opacity = 1;
+    addToCart.disabled = false;
+    addToCart.style.opacity = 1
   }
+
+  
 };
 observeQuantity();
 // Create a new MutationObserver and observe changes to the quantity element
@@ -80,6 +95,40 @@ observer.observe(quantity, {
   characterData: true,
   subtree: true,
 });
+
+
+
+  
+addToCart.addEventListener("click", () => {
+  //Get itemInfo
+  const itemName = "Fall Limited Edition Sneakers";
+  const itemPrice = 125.00;
+  const itemQty = parseInt(document.getElementById("quantity").textContent);
+
+  //Calculate total price
+  const totalPrice = itemPrice * itemQty;
+
+  // Create the item HTML
+  const itemHtml = `
+   <div class="cartDetails">
+    <span> 
+        <img src="./images/product1.jpg" alt="" id="cartImg" />
+     </span>
+    <span class="itemNames">
+      <p>${itemName}</p>
+      <p>$${itemPrice.toFixed(2)} x ${itemQty} <strong>$${totalPrice.toFixed(2)}</strong></p>
+    </span>
+    <img src="./images/icon-delete.svg" alt="" />
+  </div>
+  `;
+
+
+    const cartItems = document.querySelector(".cartDetails .cartItems");
+  cartItems.innerHTML = itemHtml;
+
+
+});
+
 
 // This function hides the modal when called
 function closeModal() {

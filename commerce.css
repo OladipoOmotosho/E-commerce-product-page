@@ -452,6 +452,7 @@ nav a:hover {
 }
 
 #cartImg {
+    display: none !important;
     width: 50px;
     height: auto;
     border-radius: 6px;
@@ -467,11 +468,16 @@ nav a:hover {
 }
 
 .cartItems {
+    min-width: 250px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+}
+
+#dustBin {
+    display: none;
 }
 
 .cartItems p {

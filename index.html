@@ -1,201 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./commerce.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700&family=Quicksand:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,900&display=swap"
-            rel="stylesheet" />
-        <title>E-commerce Product Page</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./commerce.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700&family=Quicksand:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,900&display=swap"
+        rel="stylesheet" />
+    <title>E-commerce Product Page</title>
+</head>
 
-    <body>
-        <div id="modalBg">
-            <div id="modal">
-                <div id="close">
-                    <img src="./images/closeIcon.svg" id="closeWhite" />
-                    <img id="closeOrange" src="./images/orangeClose.svg" />
-                </div>
-                <div>
-                    <div id="prev">
-                        <img id="blackprev" src="./images/icon-previous.svg"
-                            style="width:
+<body>
+    <div id="modalBg">
+        <div id="modal">
+            <div id="close">
+                <img src="./images/closeIcon.svg" id="closeWhite" />
+                <img id="closeOrange" src="./images/orangeClose.svg" />
+            </div>
+            <div>
+                <div id="prev">
+                    <img id="blackprev" src="./images/icon-previous.svg" style="width:
                             auto; height: 15px" />
-                        <img id="orangeprev" src="./images/prevOrange.svg"
-                            style="width:
+                    <img id="orangeprev" src="./images/prevOrange.svg" style="width:
                             auto; height: 15px" />
-                    </div>
-                    <img id="mainImgPop" src="./images/product1.jpg" />
                 </div>
-                <div id="nex">
-                    <img id="blackNex" src="./images/icon-next.svg"
-                        style="width: auto;
+                <img id="mainImgPop" src="./images/product1.jpg" />
+            </div>
+            <div id="nex">
+                <img id="blackNex" src="./images/icon-next.svg" style="width: auto;
                         height: 15px" />
-                    <img id="orangeNex" src="./images/orangeNext.svg"
-                        style="width: auto;
+                <img id="orangeNex" src="./images/orangeNext.svg" style="width: auto;
                         height: 15px" />
-                </div>
+            </div>
+        </div>
+
+        <section id="imageDisplay">
+            <div class="highlight" id="highlight1">
+                <img id="thumbnailss" src="./images/image-product-1-thumbnail.jpg" />
+                <div class="overlayy"></div>
+            </div>
+            <div class="highlight" id="highlight2">
+                <img id="thumbnailss" src="./images/image-product-2-thumbnail.jpg" />
+                <div class="overlayy"></div>
+            </div>
+            <div class="highlight" id="highlight3">
+                <img id="thumbnailss" src="./images/image-product-3-thumbnail.jpg" />
+                <div class="overlayy"></div>
+            </div>
+            <div class="highlight" id="highlight4">
+                <img id="thumbnailss" src="./images/image-product-4-thumbnail.jpg" />
+                <div class="overlayy"></div>
+            </div>
+        </section>
+    </div>
+    <main class="body">
+        <header class="header">
+            <div class="logo2">
+                <img src="./images/icon-menu.svg" />
+            </div>
+            <div class="logo">
+                <img src="./images/sneakersLogo.svg" />
+            </div>
+            <nav>
+                <li>
+                    <a href="#">Collections</a>
+                </li>
+                <li>
+                    <a href="#">Men</a>
+                </li>
+                <li>
+                    <a href="#">Women</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </nav>
+            <div class="imageIcons">
+                <span class="cartBox">
+                    <img id="cart" src="./images/cartLogo.svg" />
+                    <span id="noOfCartItems" class="noOfCartItems"> </span>
+                </span>
+                <img id="avatar" src="./images/profileAvatar.png" />
             </div>
 
-            <section id="imageDisplay">
-                <div class="highlight" id="highlight1">
-                    <img id="thumbnailss"
-                        src="./images/image-product-1-thumbnail.jpg" />
-                    <div class="overlayy"></div>
+            <section class="cartDropdown" id="cartDropdown">
+                <div class="borderBottom">
+                    <h3>Cart</h3>
                 </div>
-                <div class="highlight" id="highlight2">
-                    <img id="thumbnailss"
-                        src="./images/image-product-2-thumbnail.jpg" />
-                    <div class="overlayy"></div>
-                </div>
-                <div class="highlight" id="highlight3">
-                    <img id="thumbnailss"
-                        src="./images/image-product-3-thumbnail.jpg" />
-                    <div class="overlayy"></div>
-                </div>
-                <div class="highlight" id="highlight4">
-                    <img id="thumbnailss"
-                        src="./images/image-product-4-thumbnail.jpg" />
-                    <div class="overlayy"></div>
-                </div>
-            </section>
-        </div>
-        <main class="body">
-            <header class="header">
-                <div class="logo2">
-                    <img src="./images/icon-menu.svg" />
-                </div>
-                <div class="logo">
-                    <img src="./images/sneakersLogo.svg" />
-                </div>
-                <nav>
-                    <li>
-                        <a href="#">Collections</a>
-                    </li>
-                    <li>
-                        <a href="#">Men</a>
-                    </li>
-                    <li>
-                        <a href="#">Women</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </nav>
-                <div class="imageIcons">
-                    <span class="cartBox">
-                        <img id="cart" src="./images/cartLogo.svg" />
-                        <span id="noOfCartItems" class="noOfCartItems"> </span>
+                <div class="cartDetails">
+                    <span>
+                        <img src="" alt="" id="cartImg" />
                     </span>
-                    <img id="avatar" src="./images/profileAvatar.png" />
-                </div>
-
-                <section class="cartDropdown" id="cartDropdown">
-                    <div class="borderBottom">
-                        <h3>Cart</h3>
-                    </div>
-                    <div class="cartDetails">
-                        <span>
-                            <img src="./images/product1.jpg" alt="img"
-                                id="cartImg" />
+                    <div class="cartItems">
+                        <span class="itemNames">
+                            <p></p>
+                            <p><strong></strong></p>
                         </span>
-                        <div class="cartItems">
-                            <span class="itemNames">
-                                <p>Fall Limited Edition Sneakers</p>
-                                <p>$125.00 x 3 <strong>$375.00</strong></p>
-                            </span>
-                            <img src="./images/icon-delete.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="checkoutBox">
-                        <button id="checkout">Checkout</button>
-                    </div>
-                </section>
-            </header>
-            <section class="mainContent">
-                <div class="leftSide">
-                    <div class="upperArrowBtns">
-                        <div id="prevBtn">
-                            <img id="blackprev" src="./images/icon-previous.svg"
-                                style="width:
-                                auto; height: 15px" />
-                            <img id="orangeprev" src="./images/prevOrange.svg"
-                                style="width:
-                                auto; height: 15px" />
-                        </div>
-                        <div id="nextBtn">
-                            <img id="blackNex" src="./images/icon-next.svg"
-                                style="width:
-                                auto; height: 15px" />
-                            <img id="orangeNex" src="./images/orangeNext.svg"
-                                style="width:
-                                auto; height: 15px" />
-                        </div>
-                    </div>
-                    <img id="mainImg" src="./images/product1.jpg" />
-
-                    <div id="imageDisplay">
-                        <div class="highlight" id="highlight1">
-                            <img id="thumbnails"
-                                src="./images/image-product-1-thumbnail.jpg" />
-                            <div id="overlay"></div>
-                        </div>
-                        <div class="highlight" id="highlight2">
-                            <img id="thumbnails"
-                                src="./images/image-product-2-thumbnail.jpg" />
-                            <div id="overlay"></div>
-                        </div>
-                        <div class="highlight" id="highlight3">
-                            <img id="thumbnails"
-                                src="./images/image-product-3-thumbnail.jpg" />
-                            <div id="overlay"></div>
-                        </div>
-                        <div class="highlight" id="highlight4">
-                            <img id="thumbnails"
-                                src="./images/image-product-4-thumbnail.jpg" />
-                            <div id="overlay"></div>
-                        </div>
+                        <img id="dustBin" src="./images/icon-delete.svg" alt="" />
                     </div>
                 </div>
-                <section class="rightSide">
-                    <small>SNEAKER COMPANY</small>
-                    <h1>Fall Limited Edition Sneakers</h1>
-                    <p>
-                        These low-profile sneakers are your perfect casual wear
-                        companion. Featuring a durable rubber outer sole,
-                        they'll withstand everything the weather can offer.
-                    </p>
-                    <div class="flexDisplay">
-                        <span id="promo">
-                            <h3 id="price">$125.00</h3>
-                            <h4>50%</h4>
-                        </span>
-                        <span>
-                            <h5 id="priceSlash"><del>$250.00</del></h5>
-                        </span>
-                    </div>
-
-                    <div class="bracket">
-                        <div class="quantity">
-                            <span id="minus"><img src="./images/icon-minus.svg"
-                                    /></span>
-                            <span id="quantity">0</span>
-                            <span id="plus"><img src="./images//icon-plus.svg"
-                                    /></span>
-                        </div>
-                        <button id="cartbtn">Add to cart</button>
-                    </div>
-                </section>
+                <div class="checkoutBox">
+                    <button id="checkout">Checkout</button>
+                </div>
             </section>
-        </main>
+        </header>
+        <section class="mainContent">
+            <div class="leftSide">
+                <div class="upperArrowBtns">
+                    <div id="prevBtn">
+                        <img id="blackprev" src="./images/icon-previous.svg" style="width:
+                                auto; height: 15px" />
+                        <img id="orangeprev" src="./images/prevOrange.svg" style="width:
+                                auto; height: 15px" />
+                    </div>
+                    <div id="nextBtn">
+                        <img id="blackNex" src="./images/icon-next.svg" style="width:
+                                auto; height: 15px" />
+                        <img id="orangeNex" src="./images/orangeNext.svg" style="width:
+                                auto; height: 15px" />
+                    </div>
+                </div>
+                <img id="mainImg" src="./images/product1.jpg" />
 
-        <script src="./commerce.js"></script>
-    </body>
+                <div id="imageDisplay">
+                    <div class="highlight" id="highlight1">
+                        <img id="thumbnails" src="./images/image-product-1-thumbnail.jpg" />
+                        <div id="overlay"></div>
+                    </div>
+                    <div class="highlight" id="highlight2">
+                        <img id="thumbnails" src="./images/image-product-2-thumbnail.jpg" />
+                        <div id="overlay"></div>
+                    </div>
+                    <div class="highlight" id="highlight3">
+                        <img id="thumbnails" src="./images/image-product-3-thumbnail.jpg" />
+                        <div id="overlay"></div>
+                    </div>
+                    <div class="highlight" id="highlight4">
+                        <img id="thumbnails" src="./images/image-product-4-thumbnail.jpg" />
+                        <div id="overlay"></div>
+                    </div>
+                </div>
+            </div>
+            <section class="rightSide">
+                <small>SNEAKER COMPANY</small>
+                <h1>Fall Limited Edition Sneakers</h1>
+                <p>
+                    These low-profile sneakers are your perfect casual wear
+                    companion. Featuring a durable rubber outer sole,
+                    they'll withstand everything the weather can offer.
+                </p>
+                <div class="flexDisplay">
+                    <span id="promo">
+                        <h3 id="price">$125.00</h3>
+                        <h4>50%</h4>
+                    </span>
+                    <span>
+                        <h5 id="priceSlash"><del>$250.00</del></h5>
+                    </span>
+                </div>
+
+                <div class="bracket">
+                    <div class="quantity">
+                        <span id="minus"><img src="./images/icon-minus.svg" /></span>
+                        <span id="quantity">0</span>
+                        <span id="plus"><img src="./images//icon-plus.svg" /></span>
+                    </div>
+                    <button id="cartbtn">Add to cart</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="./commerce.js"></script>
+</body>
 
 </html>
