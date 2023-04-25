@@ -104,6 +104,7 @@ addToCart.addEventListener("click", () => {
   const itemName = "Fall Limited Edition Sneakers";
   const itemPrice = 125.00;
   const itemQty = parseInt(document.getElementById("quantity").textContent);
+// const itemImg = "./images/product1.jpg";
 
   //Calculate total price
   const totalPrice = itemPrice * itemQty;
@@ -118,7 +119,7 @@ addToCart.addEventListener("click", () => {
       <p>${itemName}</p>
       <p>$${itemPrice.toFixed(2)} x ${itemQty} <strong>$${totalPrice.toFixed(2)}</strong></p>
     </span>
-    <img src="./images/icon-delete.svg" alt="" />
+  
   </div>
   `;
 
@@ -126,7 +127,7 @@ addToCart.addEventListener("click", () => {
     const cartItems = document.querySelector(".cartDetails .cartItems");
   cartItems.innerHTML = itemHtml;
 
-
+// console.log(itemImg)
 });
 
 
