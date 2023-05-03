@@ -19,6 +19,8 @@ const quantity = document.getElementById("quantity");
 const itemsInCart = document.getElementById("noOfCartItems");
 const cartDetails = document.getElementsByClassName("cartDetails");
 const addToCart = document.getElementById("cartbtn");
+const emptyText = document.getElementById("emptyText");
+const deleteItem = document.getElementById("dustBin");
 // These variables keep track of the current state of the image carousel
 var currentIndex = 1;
 var currentImg = 1;
@@ -40,9 +42,9 @@ prevBtnn.addEventListener("touchend", showPrevImageMobile);
 
 
 
-if(parseInt(itemsInCart.textContent) === 0){
+if (parseInt(itemsInCart.textContent) === 0) {
   itemsInCart.style.display = "none";
-}else{
+} else {
   itemsInCart.style.display = "inline-block";
 }
 
@@ -50,8 +52,8 @@ if(parseInt(itemsInCart.textContent) === 0){
 plusBtn.addEventListener("click", () => {
   // Increase the value of the zero element by 1
   quantity.textContent = parseInt(quantity.textContent) + 1;
-itemsInCart.textContent = parseInt(itemsInCart.textContent)+1
-  if (parseInt(quantity.textContent) > 0 ) {
+  itemsInCart.textContent = parseInt(itemsInCart.textContent) + 1
+  if (parseInt(quantity.textContent) > 0) {
     minusBtn.style.opacity = 1;
     itemsInCart.style.display = "flex";
   }
@@ -64,7 +66,7 @@ minusBtn.addEventListener("click", () => {
   if (currentValue > 0) {
     quantity.textContent = currentValue - 1;
     itemsInCart.textContent = parseInt(quantity.textContent);
-  } else if (currentValue === 0 ) {
+  } else if (currentValue === 0) {
     minusBtn.style.opacity = 0.5;
     itemsInCart.style.display = "none";
   }
@@ -85,7 +87,7 @@ const observeQuantity = () => {
     addToCart.style.opacity = 1
   }
 
-  
+
 };
 observeQuantity();
 // Create a new MutationObserver and observe changes to the quantity element
@@ -98,37 +100,58 @@ observer.observe(quantity, {
 
 
 
-  
+
+
 addToCart.addEventListener("click", () => {
-  //Get itemInfo
-  const itemName = "Fall Limited Edition Sneakers";
-  const itemPrice = 125.00;
-  const itemQty = parseInt(document.getElementById("quantity").textContent);
-// const itemImg = "./images/product1.jpg";
-
-  //Calculate total price
-  const totalPrice = itemPrice * itemQty;
-
-  // Create the item HTML
-  const itemHtml = `
-   <div class="cartDetails">
-    <span> 
-        <img src="./images/product1.jpg" alt="" id="cartImg" />
-     </span>
-    <span class="itemNames">
-      <p>${itemName}</p>
-      <p>$${itemPrice.toFixed(2)} x ${itemQty} <strong>$${totalPrice.toFixed(2)}</strong></p>
-    </span>
-  
-  </div>
-  `;
 
 
-    const cartItems = document.querySelector(".cartDetails .cartItems");
-  cartItems.innerHTML = itemHtml;
+})
 
-// console.log(itemImg)
-});
+// addToCart.addEventListener("click", () => {
+//   //Get itemInfo
+//   const itemName = "Fall Limited Edition Sneakers";
+//   const itemPrice = 125.00;
+//   const itemQty = parseInt(document.getElementById("quantity").textContent);
+
+
+//   //Calculate total price
+//   const totalPrice = itemPrice * itemQty;
+
+//   // Create the item HTML
+//   const itemHtml = `
+//   <div class="subContainer">
+//    <div class="cartDetails">
+//     <span> 
+//         <img src="./images/product1.jpg" alt="" id="cartImg" />
+//      </span>
+//     <span class="itemNames">
+//       <p>${itemName}</p>
+//       <p>$${itemPrice.toFixed(2)} x ${itemQty} <strong>$${totalPrice.toFixed(2)}</strong></p>
+//     </span>
+//     <img id="dustBin" src="./images/icon-delete.svg" alt="" />
+//     </div>
+//     <div class="checkoutBox">
+//         <button id="checkout">Checkout</button>
+//      </div>
+//   </div>
+//   `;
+
+
+//   if (itemQty > 0) {
+
+//   }
+//   const cartItems = document.querySelector(".subContainer .cartItems");
+//   cartItems.innerHTML = itemHtml;
+
+// });
+
+
+// function deleteItem() {
+//   cartDetails.classList.add("empty");
+//   cartDetails.innerHTML = `<p>Your cart is empty</p>`;
+
+// }
+
 
 
 // This function hides the modal when called
@@ -145,11 +168,15 @@ function openModal() {
 
 // This function shows or hides the cart dropdown when called
 function toggleCart() {
-  if (displayCart.style.display === "none") {
+  if (displayCart.style.display === "none" && itemsInCart.textContent < 1) {
     displayCart.style.display = "block";
+
   } else {
     displayCart.style.display = "none";
   }
+
+
+
 }
 
 // This function displays the previous image in the carousel
