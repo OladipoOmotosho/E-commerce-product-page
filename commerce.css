@@ -23,7 +23,11 @@
     border-bottom: 2px solid hsl(220, 14%, 95%);
 }
 
-nav {
+.mobileNavBground {
+    display: none;
+}
+
+.desktopNav {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -31,7 +35,7 @@ nav {
     margin: auto;
 }
 
-nav a {
+.desktopNav a {
     text-decoration: none;
     padding: 10px;
     font-size: 16px;
@@ -39,7 +43,7 @@ nav a {
     color: hsl(219, 9%, 45%);
 }
 
-nav a:hover {
+.desktopNav a:hover {
     color: #4f4f4f;
     font-weight: 500;
     padding-bottom: 41px;
@@ -627,7 +631,8 @@ nav a:hover {
         /* gap: 20px; */
     }
 
-    nav {
+
+    .desktopNav {
         display: none;
     }
 
@@ -888,5 +893,47 @@ nav a:hover {
     #cart {
         cursor: pointer;
         margin: 0px 0.9375rem 0.3125rem 0rem;
+    }
+
+    .mobileNavBground {
+        z-index: 1;
+        position: absolute;
+        display: block;
+        background-color: #ffffff;
+        width: 50%;
+        height: 100vh;
+        padding: 20px 30px;
+    }
+
+    .mobileNav {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-decoration: none;
+        list-style: none;
+        text-transform: uppercase;
+
+    }
+
+    .mobileNav a {
+        text-decoration: none;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 400px;
+        color: hsl(219, 9%, 45%);
+    }
+
+    .mobileNav a:hover {
+        color: #4f4f4f;
+        font-weight: 500;
+        padding-bottom: 41px;
+        border-bottom: 3px solid hsl(26, 100%, 55%);
+    }
+
+    #closeIcon {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 }
