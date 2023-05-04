@@ -19,6 +19,7 @@ const quantity = document.getElementById("quantity");
 const itemsInCart = document.getElementById("noOfCartItems");
 const cartDetails = document.getElementsByClassName("cartDetails");
 const addToCart = document.getElementById("cartbtn");
+const closeIcon = document.getElementById("closeIcon");
 // These variables keep track of the current state of the image carousel
 var currentIndex = 1;
 var currentImg = 1;

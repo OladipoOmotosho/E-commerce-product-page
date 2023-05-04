@@ -900,7 +900,7 @@
         position: absolute;
         display: block;
         background-color: #ffffff;
-        width: 50%;
+        width: 60%;
         height: 100vh;
         padding: 20px 30px;
     }
@@ -920,8 +920,8 @@
         text-decoration: none;
         padding: 10px;
         font-size: 16px;
-        font-weight: 400px;
-        color: hsl(219, 9%, 45%);
+        font-weight: 700px;
+        color: hsl(217, 15%, 17%);
     }
 
     .mobileNav a:hover {
